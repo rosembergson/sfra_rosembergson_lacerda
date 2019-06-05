@@ -1,0 +1,8 @@
+<isinclude template="components/modules"/>
+
+<isscript>
+        var heroBanner = dw.content.ContentMgr.getContent('homepagebanner');
+        var image = heroBanner.custom.desktopbannerimage.getURL();
+</isscript>
+        
+        <img src="${image}" alt="CA"/> 
