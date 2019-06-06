@@ -160,3 +160,18 @@
         color: $white;
     }
 }
+
+
+
+.headersticky--childp{
+    height: 50px;
+    line-height: 50px;
+    margin-top: 10px;
+    font-size: 30px;
+    padding-left: 10px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    z-index:100;
+    text-align:center;
+}
