@@ -1,0 +1,38 @@
+<isdecorate template="checkout/pt_checkout">
+    <isinclude template="util/modules" />
+
+    <form action="${URLUtils.httpsContinue()}" method="post" id="${pdict.CurrentForms.forms.htmlName}"
+        class="form-bg-princ">
+        <iscomment> First form </iscomment>
+        <div class="formfield1">
+            <h1 class="cbc-bg">Shipping</h1> 
+
+            <isinputfield class="bg-input-form1" formfield="${pdict.CurrentForms.formnew.firstname}" type="text" />
+            <isinputfield class="bg-input-form1" formfield="${pdict.CurrentForms.formnew.lastname}" type="text" />
+            <isinputfield formfield="${pdict.CurrentForms.formnew.address1}" type="text" />
+            <isinputfield formfield="${pdict.CurrentForms.formnew.address2}" type="text" />
+            <isinputfield onkeyup="max(this)" onkeypress="max(this)" rows="5" cols="97" name="Area" formfield="${pdict.CurrentForms.formnew.comments}" type="text" />
+            <font id=Digitado color=black>0</font> Caracteres digitados / restam <font id=Restante color=black>150
+            </font>
+            
+        </div>
+
+        <iscomment> Second form </iscomment>
+        <div class="adress-bg">
+            <h1 class="cbc-bg">Address</h1>
+            
+            <isinputfield formfield="${pdict.CurrentForms.formnew.country}" type="select" />
+            <isinputfield formfield="${pdict.CurrentForms.formnew.codenumber}" type="select" />
+            <isinputfield formfield="${pdict.CurrentForms.formnew.creditcard}" type="select" />
+            <isinputfield formfield="${pdict.CurrentForms.formnew.expirationyear}" type="select" />
+            <isinputfield formfield="${pdict.CurrentForms.formnew.securitycode}" type="select" />
+            <isinputfield formfield="${pdict.CurrentForms.formnew.email}" type="select" />
+<label class="radio-bg1">
+                <input checked="true" class="select-rad" id="radio-check1" name="gender" type="radio" value="radio1" />
+                Credit Card</label>
+        </div>
+    <input class="button-bg" type="submit" value="Continue" name="${pdict.CurrentForms.forms.subscribe}" />
+    <input class="button-bg" type="submit" value="Continue" name="${pdict.CurrentForms.forms.subscribe}" />
+        <iscomment> Thirst form </iscomment>
+    </form>
+</isdecorate>

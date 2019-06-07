@@ -1,0 +1,83 @@
+<isdecorate template="checkout/pt_checkout">
+    <isinclude template="util/modules" />
+
+    <form action="${URLUtils.httpsContinue()}" method="post" id="${pdict.CurrentForms.forms.htmlName}"
+        class="form-bg-princ">
+        <iscomment> First form </iscomment>
+        <div class="formfield1">
+            <h1 class="cbc-bg">Person Information</h1>
+            <isinputfield class="bg-input-form1" formfield="${pdict.CurrentForms.forms.firstname}" type="text" />
+            <isinputfield class="bg-input-form1" formfield="${pdict.CurrentForms.forms.lastname}" type="text" />
+            <isinputfield class="bg-input-form1" formfield="${pdict.CurrentForms.forms.gender}" type="select" />
+            <isinputfield class="bg-input-form1 date-bg" formfield="${pdict.CurrentForms.forms.data}" type="date" />
+            <isinputfield class="bg-input-form1" formfield="${pdict.CurrentForms.forms.web}" type="text" />
+            <isinputfield class="bg-input-form1" formfield="${pdict.CurrentForms.forms.email}" type="text" />
+            <label> Coments
+                <textarea onkeyup="max(this)" onkeypress="max(this)" rows="5" cols="97" name="Area"
+                    placeholder="digite"></textarea>
+                <font id=Digitado color=black>0</font> Caracteres digitados / restam <font id=Restante color=black>150
+                </font>
+            </label>
+        </div>
+
+        <iscomment> Second form </iscomment>
+        <div class="adress-bg">
+            <h1 class="cbc-bg">Address</h1>
+            <isinputfield formfield="${pdict.CurrentForms.forms.address1}" type="text" />
+            <isinputfield formfield="${pdict.CurrentForms.forms.address2}" type="text" />
+            <isinputfield formfield="${pdict.CurrentForms.forms.country}" type="select" />
+            <isinputfield formfield="${pdict.CurrentForms.forms.state}" type="select" />
+            <isinputfield formfield="${pdict.CurrentForms.forms.city}" type="text" />
+            <isinputfield formfield="${pdict.CurrentForms.forms.zipcode}" type="text" />
+            <isinputfield formfield="${pdict.CurrentForms.forms.fone}" type="text" />
+        </div>
+
+        <iscomment> Thirst form </iscomment>
+        <div class="">
+            <h1 class="cbc-bg"> SELECT PAYMENT METHOD </h1>
+            <label class="radio-bg1">
+                <input checked="true" class="select-rad" id="radio-check1" name="gender" type="radio" value="radio1" />
+                Credit Card</label>
+            <label class="radio-bg1 radio-bg">
+                <input class="select-rad" id="radio-check2" name="gender" type="radio" value="radio2" />Bill Me Later
+            </label>
+            <div class="payment-bg">
+                <isinputfield formfield="${pdict.CurrentForms.forms.nameoncard}" type="text" />
+                <isinputfield formfield="${pdict.CurrentForms.forms.card}" type="select" />
+                <isinputfield formfield="${pdict.CurrentForms.forms.number}" type="text" />
+                <div class="expiritionday">
+                    <isinputfield formfield="${pdict.CurrentForms.forms.expirationdate}" type="select" />
+                    <isinputfield formfield="${pdict.CurrentForms.forms.expedday}" type="select" />
+                </div>
+                <div class="bg-security-code">
+                    <isinputfield class="bg-security-code" formfield="${pdict.CurrentForms.forms.securitycode}"
+                        type="text" />
+                </div>
+                <input type="submit" class="button-bg" value="Continue" name="${pdict.CurrentForms.forms.subscribe}" />
+            </div>
+        </div>
+        <div class="billme-bg">
+            <p>You must provide date of birth and the last for digits of your Social Security Number</p>
+            <isinputfield formfield="${pdict.CurrentForms.forms.namebill}" type="text" />
+
+            <div class="date-select">
+                <isinputfield formfield="${pdict.CurrentForms.forms.dateofbirthd}" type="select" />
+                <isinputfield formfield="${pdict.CurrentForms.forms.dateofm}" type="select" />
+                <isinputfield formfield="${pdict.CurrentForms.forms.dateofano}" type="select" />
+            </div>
+
+            <isinputfield formfield="${pdict.CurrentForms.forms.ssn}" type="text" />
+            <div class="tm-bg-cont">
+                <div class="cont-bg">
+                    <iscontentasset aid="bml-tc" />
+                </div>
+            </div>
+            <label>
+                <input name="${pdict.CurrentForms.forms.check}" type="checkbox" />I agreed with terms
+                <br>
+            </label>
+            <input class="button-bg" type="submit" value="Continue" name="${pdict.CurrentForms.forms.subscribe}" />
+        </div>
+
+    </form>
+</isdecorate>

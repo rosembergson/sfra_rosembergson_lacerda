@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+
+<form>
+<!-- Shipping -->
+<!-- User Informantions -->
+    <field max-length="50" binding="custom.first" mandatory="true" type="string" label="formulario.formnew.firstname.label" formid="firstname"/>
+    <field max-length="50" binding="custom.last" mandatory="true" type="string" label="formulario.formnew.lastname.label" formid="lastname"/>
+    <field max-length="50" binding="custom.address1" mandatory="true" type="string" label="formulario.formnew.address1.label" formid="address1"/>
+    <field max-length="50" binding="custom.address2" mandatory="true" type="string" label="formulario.formnew.address2.label" formid="address2"/>
+
+<!-- Country -->
+    <field binding="custom.country" mandatory="true" type="string" label="formulario.formnew.country.label" formid="country">
+        <options>
+            <option optionid="select" label="formulario.formnew.country.select.label" value="select"/>
+            <option optionid="alabama" label="formulario.formnew.country.alabama.label" value="Alabama"/>
+            <option optionid="EUA" label="formulario.formnew.country.EUA.label" value="EUA"/>
+        </options>
+    </field>
+    <field max-length="50" binding="custom.postalcode" mandatory="true" type="string" label="formulario.formnew.postalcode.label" formid="data"/>
+    <field max-length="50" binding="custom.codenumber" mandatory="true" type="number" label="formulario.formnew.codenumber.label" formid="data"/>
+    <field max-length="50" binding="custom.comments" mandatory="true" type="string" label="formulario.formnew.comments.label" formid="data"/>
+
+<!-- System payment -->
+
+    <field max-length="50" binding="custom.creditcard" mandatory="true" type="number" label="formulario.formnew.creditcard.label" formid="creditcard"/>
+    <field binding="custom.expirationyear" mandatory="true" label="formulario.formnew.expirationyear.label" type="string"  formid="expirationyear"/>
+    <field max-length="50" binding="custom.securitycode" mandatory="true" type="string" label="formulario.formnew.securitycode.label" formid="securitycode"/>
+    <field max-length="50" binding="custom.email" mandatory="true" type="date" label="formulario.formnew.email.label" formid="email"/>
+    <field max-length="50" binding="custom.savecard" mandatory="true" type="checked" label="formulario.formnew.savecard.label" formid="savecard"/>
+    <field max-length="50" binding="custom.checked" mandatory="true" type="checked" label="formulario.formnew.checked.label" formid="checked"/>
+    <action formid="subscribe" valid-form="true"/>
+
+</form>
+
+
+
