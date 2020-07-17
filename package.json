@@ -64,7 +64,7 @@
     "gulp-eslint": "^4.0.2",
     "gulp-stylelint": "^7.0.0",
     "istanbul": "^0.4.4",
-    "lodash": "^4.17.10",
+    "lodash": "^4.17.19",
     "mini-css-extract-plugin": "^0.4.1",
     "minimatch": "^3.0.4",
     "minimist": "^1.2.0",
